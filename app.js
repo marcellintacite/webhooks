@@ -44,8 +44,11 @@ app.post("/webhook", (req, res) => {
     });
 
     res.sendStatus(200);
+    // send also data
+    res.send(body);
   } else {
     res.sendStatus(404);
+    res.send(body);
   }
 });
 
